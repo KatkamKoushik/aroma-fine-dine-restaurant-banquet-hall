@@ -47,7 +47,7 @@ export function LoadingScreen({ children }: { children: React.ReactNode }) {
       >
         {/* Radial ambient glow behind logo */}
         <div
-          className="absolute w-[400px] h-[400px] rounded-full opacity-20 blur-[100px] pointer-events-none"
+          className="absolute w-[400px] h-[400px] rounded-full opacity-20 blur-[50px] md:blur-[100px] pointer-events-none"
           style={{
             background: 'radial-gradient(circle, #C5A059 0%, transparent 70%)',
           }}

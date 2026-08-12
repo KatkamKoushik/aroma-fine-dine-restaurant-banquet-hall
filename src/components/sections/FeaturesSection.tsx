@@ -25,7 +25,7 @@ export function FeaturesSection() {
   return (
     <section className="relative w-full py-24 px-4 sm:px-6 md:px-12 lg:px-24 bg-[#0a0a0a] overflow-hidden">
       {/* Subtle background glow to remove the flat-black feel */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#DFB15B]/5 blur-[120px] rounded-[100%] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#DFB15B]/5 blur-[60px] md:blur-[120px] rounded-[100%] pointer-events-none" />
       
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.div 
