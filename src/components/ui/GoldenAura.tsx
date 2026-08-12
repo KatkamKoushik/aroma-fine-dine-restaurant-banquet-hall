@@ -11,7 +11,7 @@ export function GoldenAura() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-[60] md:mix-blend-screen" aria-hidden="true">
+    <div className="fixed inset-0 pointer-events-none z-[60] mix-blend-screen" aria-hidden="true">
       <video
         autoPlay
         loop
