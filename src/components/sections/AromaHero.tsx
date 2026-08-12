@@ -97,7 +97,6 @@ export function AromaHero() {
               0 0 30px rgba(223, 177, 91, 0.3),
               0 0 45px rgba(223, 177, 91, 0.2),
               0 0 60px rgba(223, 177, 91, 0.1);
-            animation: mainGlowPulse 4s ease-in-out infinite alternate;
           }
 
           .hero-sub-text {
@@ -106,7 +105,15 @@ export function AromaHero() {
               0 0 10px rgba(223, 177, 91, 0.3),
               0 0 20px rgba(223, 177, 91, 0.2),
               0 0 30px rgba(223, 177, 91, 0.1);
-            animation: subGlowPulse 4s ease-in-out 1s infinite alternate;
+          }
+
+          @media (min-width: 768px) {
+            .hero-main-text {
+              animation: mainGlowPulse 4s ease-in-out infinite alternate;
+            }
+            .hero-sub-text {
+              animation: subGlowPulse 4s ease-in-out 1s infinite alternate;
+            }
           }
 
           @keyframes mainGlowPulse {

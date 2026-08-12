@@ -121,7 +121,7 @@ export function Navbar({ cartCount, onOpenCart }: NavbarProps) {
         )}
       </AnimatePresence>
 
-      <header className="w-full px-3 sm:px-4 md:px-8 py-3 flex justify-between items-center gap-2 border-b border-neutral-800 bg-[#0B0B0C]/90 backdrop-blur-md sticky top-0 z-40">
+      <header className="w-full px-3 sm:px-4 md:px-8 py-3 flex justify-between items-center gap-2 border-b border-neutral-800 bg-[#0B0B0C] md:bg-[#0B0B0C]/90 md:backdrop-blur-md sticky top-0 z-40">
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <div className="relative h-9 w-9 sm:h-11 sm:w-11 rounded-full border-2 border-[#DFB15B] shrink-0 overflow-hidden bg-white">
             <Image src="/brand/logo.png" alt="Aroma Logo" fill className="object-contain" sizes="44px" />
@@ -152,7 +152,7 @@ export function Navbar({ cartCount, onOpenCart }: NavbarProps) {
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <button
             onClick={onOpenCart}
-            className="bg-neutral-800 px-3 sm:px-5 py-2 rounded-lg text-[#DFB15B] font-bold text-sm border border-neutral-700 hover:border-[#DFB15B] transition-all flex items-center gap-1 sm:gap-2 shadow-[0_0_15px_rgba(223,177,91,0.1)] animate-pulse"
+            className="bg-neutral-800 px-3 sm:px-5 py-2 rounded-lg text-[#DFB15B] font-bold text-sm border border-neutral-700 hover:border-[#DFB15B] transition-all flex items-center gap-1 sm:gap-2 shadow-[0_0_15px_rgba(223,177,91,0.1)] md:animate-pulse"
           >
             CART <span className="bg-[#DFB15B] text-black px-2 py-0.5 rounded-full text-xs animate-none">{cartCount}</span>
           </button>
