@@ -74,18 +74,20 @@ export function MenuCard({ item, cartItems, onIncrease, onDecrease, onAdd }: Men
         </span>
       </div>
 
-      {/* Image container with subtle parallax */}
-      <div className="relative w-36 h-36 sm:w-48 sm:h-48 mb-4 sm:mb-6 flex items-center justify-center overflow-hidden rounded-full border border-neutral-800 transform-gpu">
-        <motion.div 
-          className="w-full h-full relative flex items-center justify-center will-change-transform"
+      {/* Image container — 4:3 landscape, full card width */}
+      <div className="relative w-full aspect-[4/3] mb-4 sm:mb-5 overflow-hidden rounded-2xl border border-neutral-800 transform-gpu"
+        style={{ background: 'radial-gradient(ellipse at center, #1a1a1a 0%, #0e0e0e 100%)' }}
+      >
+        <motion.div
+          className="absolute inset-0 will-change-transform"
           style={{ x: translateX, y: translateY }}
         >
-          <OptimizedImage 
-            src={item.image} 
-            alt={item.name} 
+          <OptimizedImage
+            src={item.image}
+            alt={item.name}
             fill
-            sizes="(max-width: 640px) 144px, 192px"
-            className="object-cover object-center scale-[1.2] drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)] rounded-full" 
+            sizes="(max-width: 640px) 100vw, 320px"
+            className="object-cover object-center drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]"
           />
         </motion.div>
       </div>

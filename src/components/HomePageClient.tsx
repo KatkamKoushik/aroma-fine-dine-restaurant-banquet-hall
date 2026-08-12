@@ -12,6 +12,8 @@ import { AmbienceGallery } from './sections/AmbienceGallery';
 import { BanquetHallSection } from './sections/BanquetHallSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { BirthdayPromoModal } from '@/components/ui/BirthdayPromoModal';
+import { CompleteDiningExperience } from './sections/CompleteDiningExperience';
+import { TableReservation } from './sections/TableReservation';
 import { CartItem, MenuItem } from '@/types';
 
 export function HomePageClient({ initialMenuItems }: { initialMenuItems: MenuItem[] }) {
@@ -126,6 +128,9 @@ export function HomePageClient({ initialMenuItems }: { initialMenuItems: MenuIte
           onAdd={addToCart} 
         />
       </div>
+
+      <CompleteDiningExperience />
+      <TableReservation />
 
       <AmbienceGallery />
       <BanquetHallSection />

@@ -3,6 +3,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { Inter, Playfair_Display, Montserrat, Cinzel } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import { LoadingScreen } from "@/components/LoadingScreen";
+import { GoldenAura } from "@/components/ui/GoldenAura";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,15 +38,19 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={`${inter.variable} ${playfair.variable} ${montserrat.variable} ${cinzel.variable}`}>
-        <body className="bg-[#0F0A06] text-white min-h-screen overflow-x-hidden flex flex-col selection:bg-[#DFB15B] selection:text-[#0F0A06]">
+      <html lang="en" className={`${inter.variable} ${playfair.variable} ${montserrat.variable} ${cinzel.variable} overflow-x-hidden`}>
+        <body className="bg-[#0b0905] text-white min-h-screen overflow-x-hidden max-w-[100vw] flex flex-col selection:bg-[#DFB15B] selection:text-[#0b0905]">
+          <GoldenAura />
           <SmoothScrollProvider>
-            <div className="relative z-10 w-full flex flex-col min-h-screen">
-              {children}
-            </div>
+            <LoadingScreen>
+              <div className="relative z-10 w-full flex flex-col min-h-screen">
+                {children}
+              </div>
+            </LoadingScreen>
           </SmoothScrollProvider>
         </body>
       </html>
     </ClerkProvider>
   );
 }
+
